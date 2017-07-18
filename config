@@ -51,7 +51,7 @@
 	exec google-chrome-stable						#Open Chrome
 	exec steam								#Open Steam
         exec --no-startup-id redshift                                           #Start Redshift
-	exec password-gorilla
+	exec password-gorilla							#Start Password Manager
 	exec_always --no-startup-id ff-theme-util
 	exec_always --no-startup-id fix_xcursor
         exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
