@@ -47,6 +47,7 @@
 	exec termite								#Open Terminal
 	exec xfce4-power-manager						#Start Power Manager
 	exec spotify								#Open Spotify
+	exec --no-startup-id blockify						#Spotify Adblocker
 	exec cutegram								#Open Telegram
 	exec google-chrome-stable						#Open Chrome
 	exec steam								#Open Steam
