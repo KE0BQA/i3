@@ -12,51 +12,51 @@
 	font pango:xos4 Terminess Powerline, FontAwesome 9
 
 # Keyboard Shortcuts
-	bindsym $mod+Ctrl+m exec pavucontrol					#Volume Control
-	bindsym $mod+Return exec termite					#Launch Terminal
-        bindsym $mod+Shift+c exec google-chrome-stable				#Open Chrome
-        bindsym $mod+F3 exec pcmanfm						#Open File Manager
-        bindsym $mod+Print exec --no-startup-id i3-scrot 			#Screenshot
-        bindsym $mod+Ctrl+Print --release exec --no-startup-id i3-scrot -w	#Screenshot (Focused)
-        bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s	#Screenshot (Selection)
-        bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf	#Help Doc
+	bindsym $mod+Ctrl+m exec pavucontrol									#Volume Control
+	bindsym $mod+Return exec termite										#Launch Terminal
+    bindsym $mod+Shift+c exec google-chrome-stable							#Open Chrome
+    bindsym $mod+F3 exec pcmanfm											#Open File Manager
+    bindsym $mod+Print exec --no-startup-id i3-scrot 						#Screenshot
+    bindsym $mod+Ctrl+Print --release exec --no-startup-id i3-scrot -w		#Screenshot (Focused)
+    bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s		#Screenshot (Selection)
+    bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf	#Help Doc
 	bindsym $mod+f fullscreen toggle					
 	bindsym $mod+Shift+q kill
 	bindsym $mod+d exec rofi -show run
-        bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-        bindsym $mod+t exec --no-startup-id pkill compton
-        bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+	bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+	bindsym $mod+t exec --no-startup-id pkill compton
+	bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 
 # Media Player Controls
 	bindsym $mod+Shift+s exec playerctl play-pause				#Play Pause
-	bindsym $mod+Shift+d exec playerctl next				#Next Track
+	bindsym $mod+Shift+d exec playerctl next					#Next Track
 	bindsym $mod+Shift+a exec playerctl previous				#Previous Track
 
 # Pulse Audio Controls
 	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%		#Increase Audio 5%
 	bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%		#Decrease Audio 5%
-	bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle			#Toggle Mute
+	bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle				#Toggle Mute
 
 #Screen Brightness Controls
-	bindsym XF86MonBrightnessUp exec xbacklight -inc 5			#Increase Brightness 5% 
+	bindsym XF86MonBrightnessUp exec xbacklight -inc 5				#Increase Brightness 5% 
 	bindsym XF86MonBrightnessDown exec xbacklight -dec 5 			#Decrease Brightness 5%
 
 #Auto Start Applications
 	exec --no-startup-id pulseaudio --start 				#Start Pulse Audio
-	exec nm-applet								#Start Network Applet
-	exec termite								#Open Terminal
-	exec xfce4-power-manager						#Start Power Manager
-	exec spotify								#Open Spotify
-	exec --no-startup-id blockify						#Spotify Adblocker
-	exec cutegram								#Open Telegram
-	exec google-chrome-stable						#Open Chrome
-	exec steam								#Open Steam
-        exec --no-startup-id redshift                                           #Start Redshift
-	exec password-gorilla							#Start Password Manager
+	exec nm-applet											#Start Network Applet
+	exec termite											#Open Terminal
+	exec xfce4-power-manager								#Start Power Manager
+	exec spotify											#Open Spotify
+	exec --no-startup-id blockify							#Spotify Adblocker
+	exec cutegram											#Open Telegram
+	exec google-chrome-stable								#Open Chrome
+	exec steam												#Open Steam
+	exec --no-startup-id Redshift 							#Start Redshift
+	exec password-gorilla 									#Start Password Manager
 	exec_always --no-startup-id ff-theme-util
 	exec_always --no-startup-id fix_xcursor
-        exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-        exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+	exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+	exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 
 # change focus
 	focus_follows_mouse no
