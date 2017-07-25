@@ -20,7 +20,7 @@ font pango:xos4 Terminess Powerline, FontAwesome 9
 	bindsym $mod+Ctrl+Print --release exec --no-startup-id i3-scrot -w		#Screenshot (Focused)
 	bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s		#Screenshot (Selection)
 	bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf	#Help Doc
-	bindsym $mod+f fullscreen toggle					
+	bindsym $mod+f fullscreen toggle				
 	bindsym $mod+Shift+q kill
 	bindsym $mod+d exec rofi -show run
 	bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -129,7 +129,7 @@ bindsym $mod+space focus mode_toggle
 	bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 	bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 	bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
-	bindsym $mod+Shift+9 move container to workspace $ws9' workspace $ws9
+	bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 # Open applications on specific workspaces
 	assign [class="Termite"] $ws1
