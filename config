@@ -28,31 +28,31 @@
 	bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 
 # Media Player Controls
-	bindsym $mod+Shift+s exec playerctl play-pause				#Play Pause
-	bindsym $mod+Shift+d exec playerctl next					#Next Track
-	bindsym $mod+Shift+a exec playerctl previous				#Previous Track
+	bindsym $mod+Shift+s exec playerctl play-pause							#Play Pause
+	bindsym $mod+Shift+d exec playerctl next								#Next Track
+	bindsym $mod+Shift+a exec playerctl previous							#Previous Track
 
 # Pulse Audio Controls
-	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%		#Increase Audio 5%
-	bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%		#Decrease Audio 5%
-	bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle				#Toggle Mute
+	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%			#Increase Audio 5%
+	bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%			#Decrease Audio 5%
+	bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle					#Toggle Mute
 
 #Screen Brightness Controls
-	bindsym XF86MonBrightnessUp exec xbacklight -inc 5				#Increase Brightness 5% 
-	bindsym XF86MonBrightnessDown exec xbacklight -dec 5 			#Decrease Brightness 5%
+	bindsym XF86MonBrightnessUp exec xbacklight -inc 5						#Increase Brightness 5% 
+	bindsym XF86MonBrightnessDown exec xbacklight -dec 5 					#Decrease Brightness 5%
 
 #Auto Start Applications
-	exec --no-startup-id pulseaudio --start 				#Start Pulse Audio
-	exec nm-applet											#Start Network Applet
-	exec termite											#Open Terminal
-	exec xfce4-power-manager								#Start Power Manager
-	exec spotify											#Open Spotify
-	exec --no-startup-id blockify							#Spotify Adblocker
-	exec cutegram											#Open Telegram
-	exec google-chrome-stable								#Open Chrome
-	exec steam												#Open Steam
-	exec --no-startup-id Redshift 							#Start Redshift
-	exec password-gorilla 									#Start Password Manager
+	exec --no-startup-id pulseaudio --start 								#Start Pulse Audio
+	exec nm-applet															#Start Network Applet
+	exec termite															#Open Terminal
+	exec xfce4-power-manager												#Start Power Manager
+	exec spotify															#Open Spotify
+	exec --no-startup-id blockify											#Spotify Adblocker
+	exec cutegram															#Open Telegram
+	exec google-chrome-stable												#Open Chrome
+	exec steam																#Open Steam
+	exec --no-startup-id Redshift 											#Start Redshift
+	exec password-gorilla 													#Start Password Manager
 	exec_always --no-startup-id ff-theme-util
 	exec_always --no-startup-id fix_xcursor
 	exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
