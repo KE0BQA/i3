@@ -257,7 +257,7 @@ bar
 	position top
 	height 18
 	tray_output none
-	status_command ~/bumblebee-status/bumblebee-status -m spotify battery brightness redshift pasource pasink date time -p interval=0.1 time.format="%H:%M:%S" date.format="%a, %d %b %Y" -t gruvbox-powerline
+	status_command ~/bumblebee-status/bumblebee-status -m spotify battery redshift brightness pasource pasink date time -p interval=0.1 time.format="%H:%M:%S" date.format="%a, %d %b %Y" -t gruvbox-powerline
 	}
 
 bar 
