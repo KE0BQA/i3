@@ -48,7 +48,7 @@ font pango:xos4 Terminess Powerline, FontAwesome 9
 	exec xfce4-power-manager												#Start Power Manager
 	exec spotify															#Open Spotify
 	exec --no-startup-id blockify											#Spotify Adblocker
-	exec cutegram															#Open Telegram
+	exec telegram-desktop													#Open Telegram
 	exec google-chrome-stable												#Open Chrome
 	exec steam																#Open Steam
 	exec --no-startup-id Redshift 											#Start Redshift
@@ -134,7 +134,7 @@ bindsym $mod+space focus mode_toggle
 # Open applications on specific workspaces
 	assign [class="Termite"] $ws1
 	assign [class="Google-chrome"] $ws2
-	assign [class="Cutegram"] $ws3
+	assign [class="TelegramDesktop"] $ws3
 	assign [class="Steam"]  $ws4
 	assign [class="Gorilla"] $ws5
 	assign [class="Spotify"] $ws9
