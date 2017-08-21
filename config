@@ -57,7 +57,8 @@ font pango:xos4 Terminess Powerline, FontAwesome 9
 	exec_always --no-startup-id fix_xcursor
 	exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 	exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-
+	exec terminal -e 'mopidy'
+	exec terminal -e 'ncmpcpp-git'
 # change focus
 	focus_follows_mouse no
 	bindsym $mod+Left focus left
@@ -265,7 +266,7 @@ bar
 {
 	position bottom
 	height 18
-	status_command ~/bumblebee-status/bumblebee-status -m cpu memory nic pacman disk -t gruvbox-powerline
+	status_command ~/bumblebee-status/bumblebee-status -m cpu memory nic pacman disk -p interval=1 -t gruvbox-powerline
 }
 
 # Theme colors
