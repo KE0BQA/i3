@@ -12,53 +12,49 @@ new_float normal
 font pango:xos4 Terminess Powerline, FontAwesome 9
 
 # Keyboard Shortcuts
-	bindsym $mod+Ctrl+m exec pavucontrol									#Volume Control
-	bindsym $mod+Return exec termite										#Launch Terminal
+	bindsym $mod+Ctrl+m exec pavucontrol								#Volume Control
+	bindsym $mod+Return exec termite								#Launch Terminal
 	bindsym $mod+Shift+c exec google-chrome-stable							#Open Chrome
-	bindsym $mod+F3 exec pcmanfm											#Open File Manager
+	bindsym $mod+F3 exec pcmanfm									#Open File Manager
 	bindsym $mod+Print exec --no-startup-id i3-scrot 						#Screenshot
-	bindsym $mod+Ctrl+Print --release exec --no-startup-id i3-scrot -w		#Screenshot (Focused)
-	bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s		#Screenshot (Selection)
-	bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf	#Help Doc
+	bindsym $mod+Ctrl+Print --release exec --no-startup-id i3-scrot -w				#Screenshot (Focused)
+	bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s				#Screenshot (Selection)
+	bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf				#Help Doc
 	bindsym $mod+f fullscreen toggle				
 	bindsym $mod+Shift+q kill
 	bindsym $mod+d exec rofi -show run
-	bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+	bindsym $mod+Ctrl+b exec termite -e 'bmenu'
 	bindsym $mod+t exec --no-startup-id pkill compton
 	bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 
 # Media Player Controls
 	bindsym $mod+Shift+s exec playerctl play-pause							#Play Pause
-	bindsym $mod+Shift+d exec playerctl next								#Next Track
+	bindsym $mod+Shift+d exec playerctl next							#Next Track
 	bindsym $mod+Shift+a exec playerctl previous							#Previous Track
 
 # Pulse Audio Controls
-	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%			#Increase Audio 5%
-	bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%			#Decrease Audio 5%
-	bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle					#Toggle Mute
+	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%					#Increase Audio 5%
+	bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%					#Decrease Audio 5%
+	bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle						#Toggle Mute
 
 #Screen Brightness Controls
 	bindsym XF86MonBrightnessUp exec xbacklight -inc 5						#Increase Brightness 5% 
-	bindsym XF86MonBrightnessDown exec xbacklight -dec 5 					#Decrease Brightness 5%
+	bindsym XF86MonBrightnessDown exec xbacklight -dec 5 						#Decrease Brightness 5%
 
 #Auto Start Applications
-	exec --no-startup-id pulseaudio --start 								#Start Pulse Audio
-	exec nm-applet															#Start Network Applet
-	exec termite															#Open Terminal
-	exec xfce4-power-manager												#Start Power Manager
-	exec spotify															#Open Spotify
-	exec --no-startup-id blockify											#Spotify Adblocker
-	exec telegram-desktop													#Open Telegram
-	exec google-chrome-stable												#Open Chrome
-	exec steam																#Open Steam
-	exec --no-startup-id Redshift 											#Start Redshift
-	exec password-gorilla 													#Start Password Manager
+	exec --no-startup-id pulseaudio --start 							#Start Pulse Audio
+	exec nm-applet											#Start Network Applet
+	exec termite											#Open Terminal
+	exec xfce4-power-manager									#Start Power Manager
+	exec telegram-desktop										#Open Telegram
+	exec google-chrome-stable									#Open Chrome
+	exec steam											#Open Steam
+	exec --no-startup-id Redshift 									#Start Redshift
+	exec password-gorilla 										#Start Password Manager
 	exec_always --no-startup-id ff-theme-util
 	exec_always --no-startup-id fix_xcursor
 	exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 	exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-	exec terminal -e 'mopidy'
-	exec terminal -e 'ncmpcpp-git'
 # change focus
 	focus_follows_mouse no
 	bindsym $mod+Left focus left
@@ -138,11 +134,6 @@ bindsym $mod+space focus mode_toggle
 	assign [class="TelegramDesktop"] $ws3
 	assign [class="Steam"]  $ws4
 	assign [class="Gorilla"] $ws5
-	assign [class="Spotify"] $ws9
-	assign [instance="Spotify"] $ws9
-	assign [title="Spotify"] $ws9
-
-for_window [class="Spotify"] move to workspace $ws9
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -259,7 +250,7 @@ bar
 	position top
 	height 18
 	tray_output none
-	status_command ~/bumblebee-status/bumblebee-status -m spotify battery redshift brightness pasource pasink date time -p interval=0.1 time.format="%H:%M:%S" date.format="%a, %d %b %Y" -t gruvbox-powerline
+	status_command ~/bumblebee-status/bumblebee-status -m battery redshift brightness pasource pasink date time -p interval=0.1 time.format="%H:%M:%S" date.format="%a, %d %b %Y" -t gruvbox-powerline
 }
 
 bar 
